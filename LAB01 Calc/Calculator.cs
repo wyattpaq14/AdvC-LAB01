@@ -30,17 +30,57 @@ namespace LAB01_Calc
             }
         } 
 
-        //
-        public string EnterValue()
+        //Method to keep the 2 entered values
+        public decimal EnteredValue()
+        {
+            return 0.0m;
+        }
+        //Method to set operation to addition
+        public decimal Add()
+        {
+            return 0.0m;
+        }
+
+        //Method to set operation to subtraction
+        public decimal Subtract()
+        {
+            return 0.0m;
+        }
+
+        //Method to set operation to multiplication
+        public decimal Multiply()
+        {
+            return 0.0m;
+        }
+
+        //Method to set operation to division
+        public decimal Divide()
+        {
+            return 0.0m;
+        }
+
+        //Method to calculate the result of the numbers based on the operation
+        public decimal Equals()
+        {
+            return 0.0m;
+        }
+
+        //Get the reciprocal of the current value
+        public decimal Reciprocal()
+        {
+            return 0.0m;
+        }
+        //Get the square root of hte current value
+        public decimal SqRt()
+        {
+            return 0.0m;
+        }
+
+        //Clear the fields
+        public void Clear()
         {
 
         }
-
-
-
-
-
-
 
     }
 }
