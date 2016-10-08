@@ -16,10 +16,16 @@ namespace LAB01_Calc
         {
             InitializeComponent();
         }
-
+        //Plus Button 
         private void button3_Click(object sender, EventArgs e)
         {
-            string msg = btnPLus.Text;
+            
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            Calculator add = new Calculator(75.20m);
+            string msg = "MEssage: " + add.Add();
             MessageBox.Show(msg);
         }
     }

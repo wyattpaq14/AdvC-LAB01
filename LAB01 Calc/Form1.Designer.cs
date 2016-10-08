@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBackspace = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnPLus = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnBackspace
             // 
-            this.button1.Location = new System.Drawing.Point(13, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBackspace.Location = new System.Drawing.Point(13, 62);
+            this.btnBackspace.Name = "btnBackspace";
+            this.btnBackspace.Size = new System.Drawing.Size(94, 23);
+            this.btnBackspace.TabIndex = 0;
+            this.btnBackspace.Text = "Back";
+            this.btnBackspace.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnClear
             // 
-            this.button2.Location = new System.Drawing.Point(128, 62);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(128, 62);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(93, 23);
+            this.btnClear.TabIndex = 1;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -81,6 +81,7 @@
             this.btn1.TabIndex = 4;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // Form1
             // 
@@ -90,8 +91,8 @@
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.btnPLus);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnBackspace);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -101,8 +102,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBackspace;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnPLus;
         private System.Windows.Forms.Button btn1;

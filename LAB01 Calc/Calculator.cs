@@ -12,9 +12,10 @@ namespace LAB01_Calc
         public decimal enteredValue;
 
         //Constructor
-        public Calculator()
+        public Calculator(decimal enteredValue)
         {
             this.CurrentValue = currentValue;
+            this.EnteredValue = enteredValue;
         }
 
         //Property to keep track of the result currently displayed by the calculator
@@ -28,17 +29,29 @@ namespace LAB01_Calc
             {
                 currentValue = value;
             }
-        } 
+        }
+
+        public decimal EnteredValue
+        {
+            get
+            {
+                return enteredValue;
+            }
+            set
+            {
+                enteredValue = value;
+            }
+        }
 
         //Method to keep the 2 entered values
-        public decimal EnteredValue()
+        public decimal EnteredValues()
         {
-            return 0.0m;
+            return enteredValue;
         }
         //Method to set operation to addition
         public decimal Add()
         {
-            return 0.0m;
+            return currentValue + enteredValue;
         }
 
         //Method to set operation to subtraction
@@ -79,7 +92,7 @@ namespace LAB01_Calc
         //Clear the fields
         public void Clear()
         {
-
+            
         }
 
     }
