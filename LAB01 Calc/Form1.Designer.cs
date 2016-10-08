@@ -33,6 +33,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnPLus = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBackspace
@@ -83,11 +84,22 @@
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
+            // btn2
+            // 
+            this.btn2.Location = new System.Drawing.Point(13, 259);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(41, 23);
+            this.btn2.TabIndex = 5;
+            this.btn2.Text = "2";
+            this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(233, 362);
+            this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.btnPLus);
             this.Controls.Add(this.textBox1);
@@ -107,6 +119,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnPLus;
         private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button btn2;
     }
 }
 

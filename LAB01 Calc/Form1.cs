@@ -12,6 +12,10 @@ namespace LAB01_Calc
 {
     public partial class Form1 : Form
     {
+
+
+        Calculator calc = new Calculator(0);
+
         public Form1()
         {
             InitializeComponent();
@@ -21,12 +25,24 @@ namespace LAB01_Calc
         {
             
         }
-
+        //Num 1 Button 
         private void btn1_Click(object sender, EventArgs e)
         {
-            Calculator add = new Calculator(75.20m);
-            string msg = "MEssage: " + add.Add();
-            MessageBox.Show(msg);
+            calc = new Calculator(1);
+            setField();
+        }
+        //Num 2 Button 
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            calc = new Calculator(2);
+            setField();
+        }
+
+        //Set the calculator screen their appropriate values based on the current value
+        private void setField()
+        {
+
+            textBox1.Text += calc.CurrentValue;
         }
     }
 }

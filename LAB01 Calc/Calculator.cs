@@ -14,8 +14,7 @@ namespace LAB01_Calc
         //Constructor
         public Calculator(decimal enteredValue)
         {
-            this.CurrentValue = currentValue;
-            this.EnteredValue = enteredValue;
+            this.CurrentValue = enteredValue;
         }
 
         //Property to keep track of the result currently displayed by the calculator
@@ -29,18 +28,8 @@ namespace LAB01_Calc
             {
                 currentValue = value;
             }
-        }
 
-        public decimal EnteredValue
-        {
-            get
-            {
-                return enteredValue;
-            }
-            set
-            {
-                enteredValue = value;
-            }
+            
         }
 
         //Method to keep the 2 entered values
