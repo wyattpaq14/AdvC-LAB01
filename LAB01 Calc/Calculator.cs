@@ -78,11 +78,7 @@ namespace LAB01_Calc
             return 0.0m;
         }
 
-        //Clear the fields
-        public void Clear()
-        {
-            
-        }
+
 
     }
 }

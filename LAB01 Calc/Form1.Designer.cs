@@ -30,7 +30,7 @@
         {
             this.btnBackspace = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCalcView = new System.Windows.Forms.TextBox();
             this.btnPLus = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@
             this.btnBackspace.TabIndex = 0;
             this.btnBackspace.Text = "Back";
             this.btnBackspace.UseVisualStyleBackColor = true;
+            this.btnBackspace.Click += new System.EventHandler(this.btnBackspace_Click);
             // 
             // btnClear
             // 
@@ -69,16 +70,16 @@
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // textBox1
+            // txtCalcView
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "210.78";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCalcView.Enabled = false;
+            this.txtCalcView.Location = new System.Drawing.Point(12, 12);
+            this.txtCalcView.Name = "txtCalcView";
+            this.txtCalcView.Size = new System.Drawing.Size(258, 20);
+            this.txtCalcView.TabIndex = 2;
+            this.txtCalcView.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnPLus
             // 
@@ -294,7 +295,7 @@
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.btnPLus);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCalcView);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnBackspace);
             this.Name = "Form1";
@@ -308,7 +309,7 @@
 
         private System.Windows.Forms.Button btnBackspace;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCalcView;
         private System.Windows.Forms.Button btnPLus;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Button btn2;
