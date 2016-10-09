@@ -149,8 +149,8 @@ namespace LAB01_Calc
 
         private void btnBackspace_Click(object sender, EventArgs e)
         {
-            //string[] charArray = new string[50];
-            calcView.TrimEnd(Convert.ToChar(calc.CurrentValue));
+            calcView = calcView.Remove(calcView.Length - 1);
+            txtCalcView.Text = calcView;
         }
     }
 }
