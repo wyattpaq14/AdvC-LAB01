@@ -19,11 +19,22 @@ namespace LAB01_Calc
         //Declare variable to be used to store string of inputed numbers
         public string calcView = "";
 
-
         public Form1()
         {
             InitializeComponent();
         }
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //Disable buttons that dont currently work
+            btnSquare.Enabled = false;
+            btnDecimal.Enabled = false;
+            btnNegative.Enabled = false;
+            bntInverse.Enabled = false;
+        }
+
+
 
         //Num 0 Button 
         private void btn0_Click(object sender, EventArgs e)
@@ -126,10 +137,9 @@ namespace LAB01_Calc
         {
             calcView = Convert.ToString(calc.Equals(calcView));
             txtCalcView.Text = calcView;
+
+            //Clean up the calcView variable
             calcView = "";
-
-
-
         }
         //Decimal Button
         private void btnDecimal_Click(object sender, EventArgs e)
@@ -139,18 +149,20 @@ namespace LAB01_Calc
         //Negative button
         private void btnNegative_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         //Button that clears the calculator view box 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            //Straight forward clearing of the calculator
             calcView = "";
             txtCalcView.Text = "";
         }
         //Button to backspace the calcView
         private void btnBackspace_Click(object sender, EventArgs e)
         {
+            //Remove the last diget of the calcView variable to act as a backspace button
             calcView = calcView.Remove(calcView.Length - 1);
             txtCalcView.Text = calcView;
         }
@@ -165,5 +177,7 @@ namespace LAB01_Calc
             calcView += calc.CurrentValue;
             txtCalcView.Text = calcView;
         }
+
+        
     }
 }

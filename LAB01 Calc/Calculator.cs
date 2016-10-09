@@ -21,7 +21,7 @@ namespace LAB01_Calc
         //Again, set to 'static' because it keeps getting whiped out
         public static int operationIndex;
 
-        
+
 
         //Constructor
         public Calculator(decimal enteredValue)
@@ -41,7 +41,6 @@ namespace LAB01_Calc
                 currentValue = value;
             }
 
-            
         }
 
         //Method to keep the 2 entered values
@@ -116,8 +115,6 @@ namespace LAB01_Calc
         {
             return 323;
         }
-
-
 
     }
 }
