@@ -91,21 +91,25 @@ namespace LAB01_Calc
         private void button3_Click(object sender, EventArgs e)
         {
             calc.Add(calcView);
+            calcView = "";
         }
         //Minus Button 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-
+            calc.Subtract(calcView);
+            calcView = "";
         }
         //Multiply Button 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-
+            calc.Multiply(calcView);
+            calcView = "";
         }
         //Divide Button 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-
+            calc.Divide(calcView);
+            calcView = "";
         }
         //Square Root BUtton
         private void btnSquare_Click(object sender, EventArgs e)
@@ -120,6 +124,11 @@ namespace LAB01_Calc
         //Equals button
         private void btnEquals_Click(object sender, EventArgs e)
         {
+            calcView = Convert.ToString(calc.Equals(calcView));
+            txtCalcView.Text = calcView;
+            calcView = "";
+
+
 
         }
         //Decimal Button
@@ -136,6 +145,7 @@ namespace LAB01_Calc
         //Button that clears the calculator view box 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            calcView = "";
             txtCalcView.Text = "";
         }
         //Button to backspace the calcView

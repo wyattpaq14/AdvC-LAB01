@@ -11,12 +11,17 @@ namespace LAB01_Calc
         public decimal currentValue;
         public decimal enteredValue;
 
+        //Variable to store current value when an operator button is pressed
+        //Dont really understand what 'static' does but it fixed the problem where it would reset to 0 after a function is done running
+        public static decimal operationVariable;
+
         //Using array to tell the equals function which operation is being used
         public string[] operationList = { "Addition", "Subtraction", "Multiplication", "Division" };
-        public int operationIndex = 0;
 
-        //Variable to store current value when an operator button is pressed
-        public decimal operationVariable;
+        //Again, set to 'static' because it keeps getting whiped out
+        public static int operationIndex;
+
+        
 
         //Constructor
         public Calculator(decimal enteredValue)
@@ -44,37 +49,61 @@ namespace LAB01_Calc
         {
             return enteredValue;
         }
+
         //Method to set operation to addition
-        public decimal Add(string value)
+        public void Add(string value)
         {
-
-            operationVariable = CurrentValue;
-
-            return 323;
+            operationIndex = 0;
+            operationVariable = Convert.ToDecimal(value);
         }
 
         //Method to set operation to subtraction
-        public decimal Subtract()
+        public void Subtract(string value)
         {
-            return 323;
+            operationIndex = 1;
+            operationVariable = Convert.ToDecimal(value);
         }
 
         //Method to set operation to multiplication
-        public decimal Multiply()
+        public void Multiply(string value)
         {
-            return 323;
+            operationIndex = 2;
+            operationVariable = Convert.ToDecimal(value);
         }
 
         //Method to set operation to division
-        public decimal Divide()
+        public void Divide(string value)
         {
-            return 323;
+            operationIndex = 3;
+            operationVariable = Convert.ToDecimal(value);
         }
 
         //Method to calculate the result of the numbers based on the operation
-        public decimal Equals()
+        public decimal Equals(string num)
         {
-            return 323;
+            decimal result = 0;
+            if (operationIndex == 0)
+            {
+                //Use addition
+                result = operationVariable + Convert.ToDecimal(num);
+            }
+            else if (operationIndex == 1)
+            {
+                //Use subtraction
+                result = operationVariable - Convert.ToDecimal(num);
+            }
+            else if (operationIndex == 2)
+            {
+                //Use multiplication
+                result = operationVariable * Convert.ToDecimal(num);
+            }
+            else if (operationIndex == 3)
+            {
+                //Use division
+                result = operationVariable / Convert.ToDecimal(num);
+            }
+
+            return result;
         }
 
         //Get the reciprocal of the current value
