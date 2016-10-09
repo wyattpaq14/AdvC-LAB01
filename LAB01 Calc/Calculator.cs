@@ -11,6 +11,13 @@ namespace LAB01_Calc
         public decimal currentValue;
         public decimal enteredValue;
 
+        //Using array to tell the equals function which operation is being used
+        public string[] operationList = { "Addition", "Subtraction", "Multiplication", "Division" };
+        public int operationIndex = 0;
+
+        //Variable to store current value when an operator button is pressed
+        public decimal operationVariable;
+
         //Constructor
         public Calculator(decimal enteredValue)
         {
@@ -38,44 +45,47 @@ namespace LAB01_Calc
             return enteredValue;
         }
         //Method to set operation to addition
-        public decimal Add()
+        public decimal Add(string value)
         {
-            return currentValue + enteredValue;
+
+            operationVariable = CurrentValue;
+
+            return 323;
         }
 
         //Method to set operation to subtraction
         public decimal Subtract()
         {
-            return 0.0m;
+            return 323;
         }
 
         //Method to set operation to multiplication
         public decimal Multiply()
         {
-            return 0.0m;
+            return 323;
         }
 
         //Method to set operation to division
         public decimal Divide()
         {
-            return 0.0m;
+            return 323;
         }
 
         //Method to calculate the result of the numbers based on the operation
         public decimal Equals()
         {
-            return 0.0m;
+            return 323;
         }
 
         //Get the reciprocal of the current value
         public decimal Reciprocal()
         {
-            return 0.0m;
+            return 323;
         }
         //Get the square root of hte current value
         public decimal SqRt()
         {
-            return 0.0m;
+            return 323;
         }
 
 

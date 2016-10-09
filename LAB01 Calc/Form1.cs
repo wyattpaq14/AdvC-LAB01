@@ -90,7 +90,7 @@ namespace LAB01_Calc
         //Plus Button 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            calc.Add(calcView);
         }
         //Minus Button 
         private void btnMinus_Click(object sender, EventArgs e)
@@ -133,23 +133,26 @@ namespace LAB01_Calc
 
         }
 
-
-        //Set the calculator screen their appropriate values based on the current value
-        private void setField()
-        {
-            calcView += calc.CurrentValue;
-            txtCalcView.Text = calcView;
-        }
-
         //Button that clears the calculator view box 
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtCalcView.Text = "";
         }
-
+        //Button to backspace the calcView
         private void btnBackspace_Click(object sender, EventArgs e)
         {
             calcView = calcView.Remove(calcView.Length - 1);
+            txtCalcView.Text = calcView;
+        }
+
+
+
+        //Methods 
+
+        //Set the calculator screen their appropriate values based on the current value
+        private void setField()
+        {
+            calcView += calc.CurrentValue;
             txtCalcView.Text = calcView;
         }
     }
