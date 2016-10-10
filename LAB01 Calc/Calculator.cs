@@ -9,7 +9,6 @@ namespace LAB01_Calc
     public class Calculator
     {
         public decimal currentValue;
-        public decimal enteredValue;
 
         //Variable to store current value when an operator button is pressed
         //Dont really understand what 'static' does but it fixed the problem where it would reset to 0 after a function is done running
@@ -41,12 +40,6 @@ namespace LAB01_Calc
                 currentValue = value;
             }
 
-        }
-
-        //Method to keep the 2 entered values
-        public decimal EnteredValues()
-        {
-            return enteredValue;
         }
 
         //Method to set operation to addition
@@ -106,14 +99,18 @@ namespace LAB01_Calc
         }
 
         //Get the reciprocal of the current value
-        public decimal Reciprocal()
+        public decimal Reciprocal(string num)
         {
-            return 323;
+            decimal result;
+            result = 1 / Convert.ToDecimal(num);
+            return result;
         }
         //Get the square root of hte current value
-        public decimal SqRt()
+        public double SqRt(string num)
         {
-            return 323;
+            double result;
+            result = Math.Sqrt(Convert.ToDouble(num));
+            return result;
         }
 
     }

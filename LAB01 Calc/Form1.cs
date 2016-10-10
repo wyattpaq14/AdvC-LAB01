@@ -28,10 +28,10 @@ namespace LAB01_Calc
         private void Form1_Load(object sender, EventArgs e)
         {
             //Disable buttons that dont currently work
-            btnSquare.Enabled = false;
+            //btnSquare.Enabled = false;
             btnDecimal.Enabled = false;
             btnNegative.Enabled = false;
-            bntInverse.Enabled = false;
+            //bntInverse.Enabled = false;
         }
 
 
@@ -42,7 +42,7 @@ namespace LAB01_Calc
             calc = new Calculator(0);
             setField();
         }
-        
+
         //Num 1 Button 
         private void btn1_Click(object sender, EventArgs e)
         {
@@ -122,15 +122,18 @@ namespace LAB01_Calc
             calc.Divide(calcView);
             calcView = "";
         }
-        //Square Root BUtton
+        //Square Root Button
         private void btnSquare_Click(object sender, EventArgs e)
         {
-
+            txtCalcView.Text = Convert.ToString(calc.SqRt(calcView));
+            calcView = "";
         }
         //Inverse button
         private void bntInverse_Click(object sender, EventArgs e)
         {
-
+            
+            txtCalcView.Text = Convert.ToString(calc.Reciprocal(calcView));
+            calcView = "";
         }
         //Equals button
         private void btnEquals_Click(object sender, EventArgs e)
@@ -149,7 +152,7 @@ namespace LAB01_Calc
         //Negative button
         private void btnNegative_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         //Button that clears the calculator view box 
@@ -178,6 +181,6 @@ namespace LAB01_Calc
             txtCalcView.Text = calcView;
         }
 
-        
+
     }
 }
