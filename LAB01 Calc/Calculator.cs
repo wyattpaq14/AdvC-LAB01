@@ -99,7 +99,7 @@ namespace LAB01_Calc
         }
 
         //Get the reciprocal of the current value
-        public decimal Reciprocal(string num)
+        public decimal reciprocal(string num)
         {
             decimal result;
             result = 1 / Convert.ToDecimal(num);
@@ -111,6 +111,13 @@ namespace LAB01_Calc
             double result;
 
             result = Math.Sqrt(Convert.ToDouble(num));
+            return result;
+        }
+        public decimal decimalPoint()
+        {
+            //Add decimal value to input received through the class
+            decimal decNum = 0.0m;
+            decimal result = Convert.ToDecimal(CurrentValue) + decNum;
             return result;
         }
 

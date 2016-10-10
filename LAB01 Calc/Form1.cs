@@ -29,7 +29,7 @@ namespace LAB01_Calc
         {
             //Disable buttons that dont currently work
             //btnSquare.Enabled = false;
-            btnDecimal.Enabled = false;
+            //btnDecimal.Enabled = false;
             //btnNegative.Enabled = false;
             //bntInverse.Enabled = false;
         }
@@ -109,7 +109,7 @@ namespace LAB01_Calc
             {
 
             }
-            
+
             //Clean up the calcView variable
             calcView = "";
         }
@@ -124,7 +124,7 @@ namespace LAB01_Calc
             {
 
             }
-            
+
             //Clean up the calcView variable
             calcView = "";
         }
@@ -139,7 +139,7 @@ namespace LAB01_Calc
             {
 
             }
-            
+
             //Clean up the calcView variable
             calcView = "";
         }
@@ -176,13 +176,13 @@ namespace LAB01_Calc
         {
             try
             {
-                txtCalcView.Text = Convert.ToString(calc.Reciprocal(calcView));
+                txtCalcView.Text = Convert.ToString(calc.reciprocal(calcView));
             }
             catch (FormatException)
             {
 
             }
-            
+
             //Clean up the calcView variable
             calcView = "";
 
@@ -206,7 +206,9 @@ namespace LAB01_Calc
         //Decimal Button
         private void btnDecimal_Click(object sender, EventArgs e)
         {
-
+            //Call method from class to add decimal value
+            calcView = Convert.ToString(calc.decimalPoint());
+            txtCalcView.Text = calcView;
         }
         //Negative button
         private void btnNegative_Click(object sender, EventArgs e)
@@ -246,6 +248,7 @@ namespace LAB01_Calc
                 //To many backspaces
             }
             txtCalcView.Text = calcView;
+
         }
 
 
