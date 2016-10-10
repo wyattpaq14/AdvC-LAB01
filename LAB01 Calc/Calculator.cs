@@ -109,6 +109,7 @@ namespace LAB01_Calc
         public double SqRt(string num)
         {
             double result;
+
             result = Math.Sqrt(Convert.ToDouble(num));
             return result;
         }

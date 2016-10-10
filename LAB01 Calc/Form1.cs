@@ -101,43 +101,88 @@ namespace LAB01_Calc
         //Plus Button 
         private void button3_Click(object sender, EventArgs e)
         {
-            calc.Add(calcView);
+            try
+            {
+                calc.Add(calcView);
+            }
+            catch (FormatException)
+            {
+
+            }
+            
             //Clean up the calcView variable
             calcView = "";
         }
         //Minus Button 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            calc.Subtract(calcView);
+            try
+            {
+                calc.Subtract(calcView);
+            }
+            catch (FormatException)
+            {
+
+            }
+            
             //Clean up the calcView variable
             calcView = "";
         }
         //Multiply Button 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            calc.Multiply(calcView);
+            try
+            {
+                calc.Multiply(calcView);
+            }
+            catch (FormatException)
+            {
+
+            }
+            
             //Clean up the calcView variable
             calcView = "";
         }
         //Divide Button 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-            calc.Divide(calcView);
+            try
+            {
+                calc.Divide(calcView);
+            }
+            catch (FormatException)
+            {
+
+            }
             //Clean up the calcView variable
             calcView = "";
         }
         //Square Root Button
         private void btnSquare_Click(object sender, EventArgs e)
         {
-            txtCalcView.Text = Convert.ToString(calc.SqRt(calcView));
+            try
+            {
+                txtCalcView.Text = Convert.ToString(calc.SqRt(calcView));
+            }
+            catch (FormatException)
+            {
+
+            }
             //Clean up the calcView variable
             calcView = "";
         }
         //Inverse button
         private void bntInverse_Click(object sender, EventArgs e)
         {
+            try
+            {
+                txtCalcView.Text = Convert.ToString(calc.Reciprocal(calcView));
+            }
+            catch (FormatException)
+            {
 
-            txtCalcView.Text = Convert.ToString(calc.Reciprocal(calcView));
+            }
+            
             //Clean up the calcView variable
             calcView = "";
 
@@ -145,7 +190,14 @@ namespace LAB01_Calc
         //Equals button
         private void btnEquals_Click(object sender, EventArgs e)
         {
-            calcView = Convert.ToString(calc.Equals(calcView));
+            try
+            {
+                calcView = Convert.ToString(calc.Equals(calcView));
+            }
+            catch (DivideByZeroException)
+            {
+                MessageBox.Show("You cannot divide by zero!", "Error!");
+            }
             txtCalcView.Text = calcView;
 
             //Clean up the calcView variable
@@ -159,8 +211,17 @@ namespace LAB01_Calc
         //Negative button
         private void btnNegative_Click(object sender, EventArgs e)
         {
-            decimal negativeConversion = Convert.ToDecimal(calcView) * -1;
-            calcView = Convert.ToString(negativeConversion);
+            decimal negativeConversion;
+            try
+            {
+                negativeConversion = Convert.ToDecimal(calcView) * -1;
+
+                calcView = Convert.ToString(negativeConversion);
+            }
+            catch (FormatException)
+            {
+
+            }
             txtCalcView.Text = calcView;
 
         }
