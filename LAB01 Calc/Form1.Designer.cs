@@ -83,11 +83,13 @@
             // 
             // btnPLus
             // 
+            this.btnPLus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPLus.Location = new System.Drawing.Point(159, 163);
             this.btnPLus.Name = "btnPLus";
             this.btnPLus.Size = new System.Drawing.Size(41, 23);
             this.btnPLus.TabIndex = 3;
             this.btnPLus.Text = "+";
+            this.btnPLus.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPLus.UseVisualStyleBackColor = true;
             this.btnPLus.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -143,16 +145,19 @@
             // 
             // btnDecimal
             // 
+            this.btnDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecimal.Location = new System.Drawing.Point(112, 163);
             this.btnDecimal.Name = "btnDecimal";
             this.btnDecimal.Size = new System.Drawing.Size(41, 23);
             this.btnDecimal.TabIndex = 9;
             this.btnDecimal.Text = ".";
+            this.btnDecimal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDecimal.UseVisualStyleBackColor = true;
             this.btnDecimal.Click += new System.EventHandler(this.btnDecimal_Click);
             // 
             // btnEquals
             // 
+            this.btnEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEquals.Location = new System.Drawing.Point(229, 134);
             this.btnEquals.Name = "btnEquals";
             this.btnEquals.Size = new System.Drawing.Size(41, 52);
@@ -163,31 +168,37 @@
             // 
             // btnMinus
             // 
+            this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinus.Location = new System.Drawing.Point(159, 134);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(41, 23);
             this.btnMinus.TabIndex = 11;
             this.btnMinus.Text = "-";
+            this.btnMinus.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnMinus.UseVisualStyleBackColor = true;
             this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
             // btnMultiply
             // 
+            this.btnMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMultiply.Location = new System.Drawing.Point(159, 105);
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(41, 23);
             this.btnMultiply.TabIndex = 12;
             this.btnMultiply.Text = "*";
+            this.btnMultiply.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnMultiply.UseVisualStyleBackColor = true;
             this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
             // 
             // btnDivide
             // 
+            this.btnDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDivide.Location = new System.Drawing.Point(159, 76);
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(41, 23);
             this.btnDivide.TabIndex = 13;
             this.btnDivide.Text = "/";
+            this.btnDivide.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDivide.UseVisualStyleBackColor = true;
             this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
             // 

@@ -30,7 +30,7 @@ namespace LAB01_Calc
             //Disable buttons that dont currently work
             //btnSquare.Enabled = false;
             btnDecimal.Enabled = false;
-            btnNegative.Enabled = false;
+            //btnNegative.Enabled = false;
             //bntInverse.Enabled = false;
         }
 
@@ -102,38 +102,45 @@ namespace LAB01_Calc
         private void button3_Click(object sender, EventArgs e)
         {
             calc.Add(calcView);
+            //Clean up the calcView variable
             calcView = "";
         }
         //Minus Button 
         private void btnMinus_Click(object sender, EventArgs e)
         {
             calc.Subtract(calcView);
+            //Clean up the calcView variable
             calcView = "";
         }
         //Multiply Button 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
             calc.Multiply(calcView);
+            //Clean up the calcView variable
             calcView = "";
         }
         //Divide Button 
         private void btnDivide_Click(object sender, EventArgs e)
         {
             calc.Divide(calcView);
+            //Clean up the calcView variable
             calcView = "";
         }
         //Square Root Button
         private void btnSquare_Click(object sender, EventArgs e)
         {
             txtCalcView.Text = Convert.ToString(calc.SqRt(calcView));
+            //Clean up the calcView variable
             calcView = "";
         }
         //Inverse button
         private void bntInverse_Click(object sender, EventArgs e)
         {
-            
+
             txtCalcView.Text = Convert.ToString(calc.Reciprocal(calcView));
+            //Clean up the calcView variable
             calcView = "";
+
         }
         //Equals button
         private void btnEquals_Click(object sender, EventArgs e)
@@ -152,6 +159,9 @@ namespace LAB01_Calc
         //Negative button
         private void btnNegative_Click(object sender, EventArgs e)
         {
+            decimal negativeConversion = Convert.ToDecimal(calcView) * -1;
+            calcView = Convert.ToString(negativeConversion);
+            txtCalcView.Text = calcView;
 
         }
 
@@ -166,7 +176,14 @@ namespace LAB01_Calc
         private void btnBackspace_Click(object sender, EventArgs e)
         {
             //Remove the last diget of the calcView variable to act as a backspace button
-            calcView = calcView.Remove(calcView.Length - 1);
+            try
+            {
+                calcView = calcView.Remove(calcView.Length - 1);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                //To many backspaces
+            }
             txtCalcView.Text = calcView;
         }
 
